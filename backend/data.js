@@ -1,7 +1,22 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+    users: [
+        {
+            name: 'Jules',
+            email: 'admin@example.com',
+            password: bcrypt.hashSync('1234', 8),
+            isAdmin: true,
+        },
+        {
+            name: 'Boris',
+            email: 'boris@example.com',
+            password: bcrypt.hashSync('12345', 8),
+            isAdmin: false,
+        },
+    ],
     products:[
         {
-            _id:'1',
             name:'Bud bud',
             category:'herb',
             image:'/images/p1.jpg',
@@ -12,9 +27,8 @@ const data = {
             numReviews: 10,
             description: 'grosse beuh',
         },
-        {
-            _id:'2',
-            name:'Bud bud',
+        {          
+            name:'Bod bod',
             category:'herb',
             image:'/images/p2.jpg',
             price: 10,
@@ -24,9 +38,8 @@ const data = {
             numReviews: 10,
             description: 'grosse beuh',
         },
-        {
-            _id:'3',
-            name:'Bud bud',
+        {           
+            name:'Bid bid',
             category:'herb',
             image:'/images/p3.jpg',
             price: 10,
@@ -36,9 +49,8 @@ const data = {
             numReviews: 10,
             description: 'grosse beuh',
         },
-        {
-            _id:'4',
-            name:'Bud bud',
+        {            
+            name:'Bad bad',
             category:'herb',
             image:'/images/p1.jpg',
             price: 10,
@@ -48,9 +60,8 @@ const data = {
             numReviews: 10,
             description: 'grosse beuh',
         },
-        {
-            _id:'5',
-            name:'Bud bud',
+        {        
+            name:'Bud bad',
             category:'herb',
             image:'/images/p2.jpg',
             price: 10,
@@ -61,8 +72,7 @@ const data = {
             description: 'grosse beuh',
         },
         {
-            _id:'6',
-            name:'Bud bud',
+            name:'Bad bud',
             category:'herb',
             image:'/images/p3.jpg',
             price: 10,
